@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="<c:url value='/resources/cliente.css'/>">
   <script src="<c:url value="/resources/proyecto.js" />"></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-  <script src="http://code.highcharts.com/modules/exporting.js"></script>
- 
+<!--   <script src="http://code.highcharts.com/highcharts.js"></script> -->
+<!--   <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
+ <script src="<c:url value="/resources/highcharts.js" />"></script>
 </head>
 <body >
 
