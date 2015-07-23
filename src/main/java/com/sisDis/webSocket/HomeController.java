@@ -91,14 +91,10 @@ public void onMessage(String message, Session userSession) throws IOException {
 			if(miTurno.equals("uno")){
 				updatePriceAndBroadcast(CLIENTE,message,userSession);
 			    miCronometro.setTiempo(CLIENTE);
-			    System.out.println("Entramos a cliente");
-			    System.out.println("numero de mensajes:" + mensajesC.size());
 			}else{
 				if(miTurno.equals("cero")){
 				updatePriceAndBroadcast(SERVIDOR,message,userSession);
 			    miCronometro.setTiempo(SERVIDOR);
-			    System.out.println("Entramos a servidor");
-			    System.out.println("numero de mensajes:" + mensajesS.size());
 				}else{
 					
 					updateInfoSensores(message,userSession);
