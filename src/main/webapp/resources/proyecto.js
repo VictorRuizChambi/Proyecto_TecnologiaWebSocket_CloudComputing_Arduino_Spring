@@ -50,7 +50,7 @@
 	      				
 	      			    var point = [ (new Date()).getTime(), parseDouble(mens) ];
 
-	      		  function actualizarGrafTemp(point);
+	      		         actualizarGrafTemp(point);
 	      				
 	      			}	
       					
