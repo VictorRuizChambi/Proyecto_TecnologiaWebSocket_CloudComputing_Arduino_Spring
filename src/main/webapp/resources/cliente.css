@@ -101,14 +101,11 @@ footer{
 
 
 #graficoDistancia{ 
-    height: 30px; 
-    width: 140px; 
     background-color: #f5f5f5; 
     border: solid 3px silver; 
-    position: relative; 
- 
- 	top: 200px;
- 	left:300px;   
+    width: 400px;
+    margin: 0px auto;
+    padding: 8px;   
 } 
 
 
