@@ -39,7 +39,7 @@
             
       		var stringLength = mens.length;
       		
-      			if(turno = "tres"){
+      			if(turno === "tres"){
 	      			if(mens.charAt(stringLength - 1) ==='m'){
 	      				document.getElementById("graficoDistancia").innerHTML=mens;
 	      			}else{
