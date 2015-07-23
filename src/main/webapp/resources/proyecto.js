@@ -91,8 +91,8 @@
 	      				mens=mens.substr(0,stringLength - 3);
 	      				
 	      			    var point = [ (new Date()).getTime(), parseFloat(mens) ];
-	      			  var shift = randomData.data.length > 60;
-	      			  randomData.addPoint(point, true, shift);
+//	      			  var shift = randomData.data.length > 60;
+	      			  randomData.addPoint(point, true, false);
 	      		         
 	      				
 	      			}	
