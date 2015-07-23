@@ -43,7 +43,7 @@
       		
       			if(turno === "tres"){
 	      			if(mens.charAt(stringLength - 1) ==='m'){
-	      				document.getElementById("graficoDistancia").innerHTML=mens;
+	      				document.getElementById("graficoTemperatura").innerHTML=mens;
 //	      				actualizarGrafDistancia(mens);
 	      				mens=mens.substr(0,stringLength - 4);
 	      				var valor = parseFloat(mens);
@@ -51,7 +51,7 @@
 	      				sensorDis.set(valor);
 	      				
 	      			}else{
-	      				document.getElementById("graficoTemperatura").innerHTML=mens;
+	      				document.getElementById("graficoDistancia").innerHTML=mens;
 	      				
 	      				mens=mens.substr(0,stringLength - 3);
 	      				var valor = parseFloat(mens);

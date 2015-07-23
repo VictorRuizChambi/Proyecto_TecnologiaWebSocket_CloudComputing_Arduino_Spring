@@ -76,10 +76,14 @@ window.onload=function(){startTime();connect(); micanvas();}
 
 	<div   id="reloj" style="font-size:20px;"></div>
     
-    <p id="graficoTemperatura" style="font-size:20px;"></p>
-    <p id="GraficTemperatura" style="font-size:20px;"></p>
-    <p id="graficoDistancia" style="font-size:20px;"></p>
+    
     <canvas id="foo">guage</canvas>
+    <div id="graficoTemperatura" style="font-size:20px;" ></div>
+    <div id="graficoDistancia" style="font-size:20px;" ></div>
+    
+	
+    
+    
 
 	<div id="ContDist" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 

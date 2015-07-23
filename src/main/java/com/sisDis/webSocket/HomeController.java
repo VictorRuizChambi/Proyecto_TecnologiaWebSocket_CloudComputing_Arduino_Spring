@@ -66,12 +66,11 @@ public void onClose(Session userSession) {
 
 @OnMessage
 public void onMessage(String message, Session userSession) throws IOException {
-    System.out.println("Recibiendo en onMessage: " + message);
+    
     
 		//guardo los mensajes  en una lista estatica	
     	String miTurno=turno(message);
 		String mensaje=mensaje(message);
-		System.out.println("Mensaje:"+mensaje);
 		
 		if(!miTurno.equals("tres")){
 			Mensaje mensj = new Mensaje();
@@ -148,8 +147,6 @@ private void updatePriceAndBroadcast(int solicitante, String nuevoMensaje, Sessi
   	for (Session session : userSessions) 
 	        {
   		session.getAsyncRemote().sendText(nuevoMensaje);
-  		System.out.println("Enviado : usuario" + session.getId());
-  		System.out.println("envio nu nuevo mensaje");
 	        }	
   	
   }else{
@@ -164,8 +161,6 @@ public void updateInfoSensores(String nuevoMensaje, Session userSession){
 	for (Session session : userSessions) 
 	        {
 		session.getAsyncRemote().sendText(nuevoMensaje);
-		System.out.println("Enviado : usuario" + session.getId());
-		System.out.println("envio nu nuevo mensaje");
 	        }	
 	
 }
