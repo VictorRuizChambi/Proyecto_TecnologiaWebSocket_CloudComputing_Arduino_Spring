@@ -48,7 +48,7 @@
 	      				
 	      				mens=mens.substr(0,stringLength - 3);
 	      				
-	      			    var point = [ (new Date()).getTime(), parseDouble(mens) ];
+	      			    var point = [ (new Date()).getTime(), parseFloat(mens) ];
 
 	      		         actualizarGrafTemp(point);
 	      				
