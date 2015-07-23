@@ -74,9 +74,8 @@ window.onload=function(){startTime();connect();}
 <div   id="reloj" style="font-size:20px;"></div>
 
     
-    
-      <div id="graficoTemperatura" style="font-size:20px;"></div>
-      <div id="graficoDistancia" style="font-size:20px;"></div>
+    <p id="graficoTemperatura" style="font-size:20px;"></p>
+    <p id="graficoDistancia" style="font-size:20px;"></p>
      
       <script>
 
