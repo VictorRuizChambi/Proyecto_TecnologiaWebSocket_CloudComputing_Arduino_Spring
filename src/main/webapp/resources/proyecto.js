@@ -124,7 +124,6 @@ function micanvas(mivalor){
 				};
 				var target = document.getElementById('foo'); // your canvas element
 				var gauge = new Gauge(target);
-				alert("here");
 				gauge.setOptions(opts); // create sexy gauge!
 				gauge.maxValue = 3000; // set max gauge value
 				gauge.animationSpeed = 32; // set animation speed (32 is default value)
