@@ -32,7 +32,7 @@ public String obtenerValorTemp(){
             
            
             String informacion = 
-                    String.valueOf(jsonObject_with_content.getDouble("temperatura")) + "°";
+                    String.valueOf(jsonObject_with_content.getDouble("temperatura")) + " C";
             
             
             
