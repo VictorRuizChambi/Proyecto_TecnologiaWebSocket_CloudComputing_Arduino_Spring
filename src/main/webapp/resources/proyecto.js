@@ -42,7 +42,7 @@
       			if(turno === "tres"){
 	      			if(mens.charAt(stringLength - 1) ==='m'){
 	      				document.getElementById("graficoDistancia").innerHTML=mens;
-	      				actualizarGrafDistancia(mens);
+//	      				actualizarGrafDistancia(mens);
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
 	      				
@@ -82,51 +82,51 @@
   
   
   
-function actualizarGrafDistancia(dist){  
-  
-  $(function () {
-	    $('#ContDist').highcharts({
-	        chart: {
-	            plotBackgroundColor: null,
-	            plotBorderWidth: 0,
-	            plotShadow: false
-	        },
-	        title: {
-	            text: 'Sensor<br>Distancia<br>SSDD 2015-I',
-	            align: 'center',
-	            verticalAlign: 'middle',
-	            y: 40
-	        },
-	        tooltip: {
-	            pointFormat: '{series.name}: <b>{point.percentage:.1f}cm</b>'
-	        },
-	        plotOptions: {
-	            pie: {
-	                dataLabels: {
-	                    enabled: true,
-	                    distance: -50,
-	                    style: {
-	                        fontWeight: 'bold',
-	                        color: 'white',
-	                        textShadow: '0px 1px 2px black'
-	                    }
-	                },
-	                startAngle: -90,
-	                endAngle: 90,
-	                center: ['50%', '75%']
-	            }
-	        },
-	        series: [{
-	            type: 'pie',
-	            name: 'Distancia',
-	            innerSize: '50%',
-	            data: [
-	                ['Sensor HC-SR04',   dist]
-	            ]
-	        }]
-	    });
-	});
-}
+//function actualizarGrafDistancia(dist){  
+//  
+//  $(function () {
+//	    $('#ContDist').highcharts({
+//	        chart: {
+//	            plotBackgroundColor: null,
+//	            plotBorderWidth: 0,
+//	            plotShadow: false
+//	        },
+//	        title: {
+//	            text: 'Sensor<br>Distancia<br>SSDD 2015-I',
+//	            align: 'center',
+//	            verticalAlign: 'middle',
+//	            y: 40
+//	        },
+//	        tooltip: {
+//	            pointFormat: '{series.name}: <b>{point.percentage:.1f}cm</b>'
+//	        },
+//	        plotOptions: {
+//	            pie: {
+//	                dataLabels: {
+//	                    enabled: true,
+//	                    distance: -50,
+//	                    style: {
+//	                        fontWeight: 'bold',
+//	                        color: 'white',
+//	                        textShadow: '0px 1px 2px black'
+//	                    }
+//	                },
+//	                startAngle: -90,
+//	                endAngle: 90,
+//	                center: ['50%', '75%']
+//	            }
+//	        },
+//	        series: [{
+//	            type: 'pie',
+//	            name: 'Distancia',
+//	            innerSize: '50%',
+//	            data: [
+//	                ['Sensor HC-SR04',   dist]
+//	            ]
+//	        }]
+//	    });
+//	});
+//}
 
 
 
@@ -169,7 +169,7 @@ series : {
 }
 },
 series : [ {
-name : 'Data',
+name : 'Temperatura',
   data : [ ]
 } ]
 });
