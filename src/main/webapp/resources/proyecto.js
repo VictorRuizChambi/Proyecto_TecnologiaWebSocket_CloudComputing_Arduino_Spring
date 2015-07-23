@@ -44,12 +44,16 @@
 	      			if(mens.charAt(stringLength - 1) ==='m'){
 	      				document.getElementById("graficoDistancia").innerHTML=mens;
 //	      				actualizarGrafDistancia(mens);
+	      				mens=mens.substr(0,stringLength - 4);
+	      				var valor = parseFloat(mens);
+	      				micanvas(valor);
 	      				
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
 	      				
 	      				mens=mens.substr(0,stringLength - 3);
 	      				var valor = parseFloat(mens);
+	      				valor = 10*valor;
 	      				micanvas(valor);
 	      		         
 	      				
@@ -126,7 +130,7 @@ function micanvas(mivalor){
 				var gauge = new Gauge(target);
 				gauge.setOptions(opts); // create sexy gauge!
 				gauge.maxValue = 3000; // set max gauge value
-				gauge.animationSpeed = 32; // set animation speed (32 is default value)
+				gauge.animationSpeed = 100; // set animation speed (32 is default value)
 				gauge.set(mivalor); // set actual value
 	
 }
