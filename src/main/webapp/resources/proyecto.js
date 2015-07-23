@@ -120,7 +120,7 @@
 				  strokeColor: '#E0E0E0',   // to see which ones work best for you
 				  generateGradient: true
 				};
-				var target = document.getElementById('foo'); // your canvas element
+				var target = document.getElementById("foo"); // your canvas element
 				var gauge = new Gauge(target);
 				alert("here");
 				gauge.setOptions(opts); // create sexy gauge!
