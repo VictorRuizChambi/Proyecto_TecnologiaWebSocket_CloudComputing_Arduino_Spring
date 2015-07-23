@@ -4,6 +4,7 @@
   var webCtx = path.substring(0, path.indexOf('/', 1));
   var endPointURL = "ws://" + host + webCtx + ":8000/ws";
   var Proyecto = null;
+  var sensorDis;
 	
 
   
@@ -46,7 +47,8 @@
 //	      				actualizarGrafDistancia(mens);
 	      				mens=mens.substr(0,stringLength - 4);
 	      				var valor = parseFloat(mens);
-	      				micanvas(valor);
+	      				valor = 10*valor;
+	      				sensorDis.set(mivalor);
 	      				
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
@@ -54,7 +56,7 @@
 	      				mens=mens.substr(0,stringLength - 3);
 	      				var valor = parseFloat(mens);
 	      				valor = 10*valor;
-	      				micanvas(valor);
+//	      				micanvas(valor);
 	      		         
 	      				
 	      			}	
@@ -111,7 +113,7 @@
 //		gauge.animationSpeed = 32; // set animation speed (32 is default value)
 //		gauge.set(270); // set actual value
 
-function micanvas(mivalor){
+function micanvas(){
 		var opts = {
 				  lines: 12, // The number of lines to draw
 				  angle: 0.15, // The length of each line
@@ -131,7 +133,8 @@ function micanvas(mivalor){
 				gauge.setOptions(opts); // create sexy gauge!
 				gauge.maxValue = 3000; // set max gauge value
 				gauge.animationSpeed = 100; // set animation speed (32 is default value)
-				gauge.set(mivalor); // set actual value
+				sensorDis=gauge;
+				 // set actual value
 	
 }
 	
