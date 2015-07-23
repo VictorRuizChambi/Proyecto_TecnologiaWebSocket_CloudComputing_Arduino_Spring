@@ -48,7 +48,7 @@
 	      				mens=mens.substr(0,stringLength - 4);
 	      				var valor = parseFloat(mens);
 	      				valor = 10*valor;
-	      				sensorDis.set(mivalor);
+	      				sensorDis.set(valor);
 	      				
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
