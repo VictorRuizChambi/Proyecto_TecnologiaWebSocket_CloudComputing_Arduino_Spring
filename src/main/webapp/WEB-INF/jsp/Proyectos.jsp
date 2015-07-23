@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="<c:url value='/resources/cliente.css'/>">
   <script src="<c:url value="/resources/proyecto.js" />"></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
 </head>
 <body >
 
