@@ -135,7 +135,7 @@ function actualizarGrafTemp(point){
 	var shift = randomData.data.length > 60;
 	randomData.addPoint(point, true, shift);
 	
-$('#graficoTemperatura').highcharts({
+$('#GraficTemperatura').highcharts({
 chart : {
 type : 'line',
 events : {
