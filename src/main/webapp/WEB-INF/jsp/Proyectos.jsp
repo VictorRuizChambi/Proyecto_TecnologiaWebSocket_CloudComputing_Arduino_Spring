@@ -69,7 +69,7 @@ t=setTimeout('startTime()',500);}
 		}
 
 
-window.onload=function(){startTime();connect();}
+window.onload=function(){startTime();connect(); micanvas();}
 </script>
 
 

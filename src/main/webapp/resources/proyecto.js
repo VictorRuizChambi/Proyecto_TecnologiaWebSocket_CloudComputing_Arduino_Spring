@@ -105,7 +105,7 @@
 //		gauge.animationSpeed = 32; // set animation speed (32 is default value)
 //		gauge.set(270); // set actual value
 
-
+function micanvas(){
 		var opts = {
 				  lines: 12, // The number of lines to draw
 				  angle: 0.15, // The length of each line
@@ -128,6 +128,7 @@
 				gauge.animationSpeed = 32; // set animation speed (32 is default value)
 				gauge.set(1250); // set actual value
 	
+}
 	
 
 
