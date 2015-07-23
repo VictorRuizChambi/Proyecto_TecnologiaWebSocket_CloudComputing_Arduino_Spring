@@ -4,7 +4,8 @@
   var webCtx = path.substring(0, path.indexOf('/', 1));
   var endPointURL = "ws://" + host + webCtx + ":8000/ws";
   var Proyecto = null;
-  
+  var randomData;
+	
   
   function connect () {
   	
@@ -49,8 +50,9 @@
 	      				mens=mens.substr(0,stringLength - 3);
 	      				
 	      			    var point = [ (new Date()).getTime(), parseFloat(mens) ];
-
-	      		         actualizarGrafTemp(point);
+	      			  var shift = randomData.data.length > 60;
+	      			  randomData.addPoint(point, true, shift);
+	      		         
 	      				
 	      			}	
       					
@@ -130,10 +132,8 @@
 
 
 
-function actualizarGrafTemp(point){
-	var randomData;
-	var shift = randomData.data.length > 60;
-	randomData.addPoint(point, true, shift);
+
+	
 	
 $('#GraficTemperatura').highcharts({
 chart : {
@@ -174,4 +174,3 @@ name : 'Temperatura',
 } ]
 });
 
-}
