@@ -4,7 +4,7 @@
   var webCtx = path.substring(0, path.indexOf('/', 1));
   var endPointURL = "ws://" + host + webCtx + ":8000/ws";
   var Proyecto = null;
-  var randomData;
+  
   
   function connect () {
   	
@@ -131,7 +131,7 @@
 
 
 function actualizarGrafTemp(point){
-	
+	var randomData;
 	var shift = randomData.data.length > 60;
 	randomData.addPoint(point, true, shift);
 	
