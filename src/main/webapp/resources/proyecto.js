@@ -44,11 +44,13 @@
 	      			if(mens.charAt(stringLength - 1) ==='m'){
 	      				document.getElementById("graficoDistancia").innerHTML=mens;
 //	      				actualizarGrafDistancia(mens);
+	      				
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
 	      				
 	      				mens=mens.substr(0,stringLength - 3);
-	      				
+	      				var valor = parseFloat(mens);
+	      				micanvas(valor);
 	      		         
 	      				
 	      			}	
@@ -105,7 +107,7 @@
 //		gauge.animationSpeed = 32; // set animation speed (32 is default value)
 //		gauge.set(270); // set actual value
 
-function micanvas(){
+function micanvas(mivalor){
 		var opts = {
 				  lines: 12, // The number of lines to draw
 				  angle: 0.15, // The length of each line
@@ -126,7 +128,7 @@ function micanvas(){
 				gauge.setOptions(opts); // create sexy gauge!
 				gauge.maxValue = 3000; // set max gauge value
 				gauge.animationSpeed = 32; // set animation speed (32 is default value)
-				gauge.set(1250); // set actual value
+				gauge.set(mivalor); // set actual value
 	
 }
 	
