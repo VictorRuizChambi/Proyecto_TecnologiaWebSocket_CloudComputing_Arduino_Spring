@@ -5,9 +5,7 @@
   var endPointURL = "ws://" + host + webCtx + ":8000/ws";
   var Proyecto = null;
 
-
-  /*Este es el código de la parte del servidor*/
-
+  
   function connect () {
   	
   	console.log("Conectando a ruta: " + endPointURL);
