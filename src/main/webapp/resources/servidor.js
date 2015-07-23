@@ -28,7 +28,7 @@
       {
           console.log("debug onmessage");    
           
-//              var jsonObj = JSON.parse(event.data);     
+    
               var texto = JSON.parse(frame.data);
               
               
