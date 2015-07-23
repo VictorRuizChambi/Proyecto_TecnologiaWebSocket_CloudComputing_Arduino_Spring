@@ -92,9 +92,9 @@ footer{
 #graficoDistancia{ 
     background-color: #f5f5f5; 
     border: solid 3px silver; 
-    float:left;
+    
 	width: 150px;
-    margin: 20px 70px;
+    margin: 20px auto;
     padding: 8px;
 } 
 
@@ -105,11 +105,17 @@ footer{
     
 	 
     width: 150px;
-    margin: 20px 70px;
+    margin: 20px auto;
     padding: 8px;
 } 
 
+ 
 
+#foo{ 
+    
+    margin: auto 330px;
+    
+} 
 
 
 
