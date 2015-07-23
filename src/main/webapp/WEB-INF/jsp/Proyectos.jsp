@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="<c:url value='/resources/cliente.css'/>">
   <script src="<c:url value="/resources/proyecto.js" />"></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
  
 </head>
 <body >
@@ -71,18 +73,15 @@ t=setTimeout('startTime()',500);}
 window.onload=function(){startTime();connect();}
 </script>
 
-<div   id="reloj" style="font-size:20px;"></div>
 
+
+	<div   id="reloj" style="font-size:20px;"></div>
     
     <p id="graficoTemperatura" style="font-size:20px;"></p>
     <p id="graficoDistancia" style="font-size:20px;"></p>
-     
-      <script>
 
+	<div id="ContDist" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 
-
-        
-        </script>
 
 	<footer>
 		<p>

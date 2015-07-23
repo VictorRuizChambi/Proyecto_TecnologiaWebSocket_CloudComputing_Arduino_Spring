@@ -4,7 +4,7 @@
   var webCtx = path.substring(0, path.indexOf('/', 1));
   var endPointURL = "ws://" + host + webCtx + ":8000/ws";
   var Proyecto = null;
-
+  var randomData;
   
   function connect () {
   	
@@ -42,8 +42,15 @@
       			if(turno === "tres"){
 	      			if(mens.charAt(stringLength - 1) ==='m'){
 	      				document.getElementById("graficoDistancia").innerHTML=mens;
+	      				actualizarGrafDistancia(mens);
 	      			}else{
 	      				document.getElementById("graficoTemperatura").innerHTML=mens;
+	      				
+	      				mens=mens.substr(0,stringLength - 3);
+	      				
+	      			    var point = [ (new Date()).getTime(), parseDouble(mens) ];
+
+	      		  function actualizarGrafTemp(point);
 	      				
 	      			}	
       					
@@ -72,3 +79,99 @@
 
       
   }
+  
+  
+  
+function actualizarGrafDistancia(dist){  
+  
+  $(function () {
+	    $('#ContDist').highcharts({
+	        chart: {
+	            plotBackgroundColor: null,
+	            plotBorderWidth: 0,
+	            plotShadow: false
+	        },
+	        title: {
+	            text: 'Sensor<br>Distancia<br>SSDD 2015-I',
+	            align: 'center',
+	            verticalAlign: 'middle',
+	            y: 40
+	        },
+	        tooltip: {
+	            pointFormat: '{series.name}: <b>{point.percentage:.1f}cm</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                dataLabels: {
+	                    enabled: true,
+	                    distance: -50,
+	                    style: {
+	                        fontWeight: 'bold',
+	                        color: 'white',
+	                        textShadow: '0px 1px 2px black'
+	                    }
+	                },
+	                startAngle: -90,
+	                endAngle: 90,
+	                center: ['50%', '75%']
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: 'Distancia',
+	            innerSize: '50%',
+	            data: [
+	                ['Sensor HC-SR04',   dist]
+	            ]
+	        }]
+	    });
+	});
+}
+
+
+
+function actualizarGrafTemp(point){
+	
+	var shift = randomData.data.length > 60;
+	randomData.addPoint(point, true, shift);
+	
+$('#graficoTemperatura').highcharts({
+chart : {
+type : 'line',
+events : {
+  load : function() {
+    randomData = this.series[0];
+  }
+}
+},
+title : {
+text : false
+},
+xAxis : {
+type : 'datetime',
+minRange : 60 * 1000
+},
+yAxis : {
+title : {
+  text : false
+},
+max: 100
+},
+legend : {
+enabled : false
+},
+plotOptions : {
+series : {
+  threshold : 0,
+  marker : {
+    enabled : false
+  }
+}
+},
+series : [ {
+name : 'Data',
+  data : [ ]
+} ]
+});
+
+}
