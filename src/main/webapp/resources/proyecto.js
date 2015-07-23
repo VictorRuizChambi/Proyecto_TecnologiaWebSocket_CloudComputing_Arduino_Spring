@@ -6,47 +6,7 @@
   var Proyecto = null;
   var randomData;
 	
-  
-  $('#GraficTemperatura').highcharts({
-	  chart : {
-	  type : 'line',
-	  events : {
-	    load : function() {
-	      randomData = this.series[0];
-	    }
-	  }
-	  },
-	  title : {
-	  text : false
-	  },
-	  xAxis : {
-	  type : 'datetime',
-	  minRange : 60 * 1000
-	  },
-	  yAxis : {
-	  title : {
-	    text : false
-	  },
-	  max: 100
-	  },
-	  legend : {
-	  enabled : false
-	  },
-	  plotOptions : {
-	  series : {
-	    threshold : 0,
-	    marker : {
-	      enabled : false
-	    }
-	  }
-	  },
-	  series : [ {
-	  name : 'Temperatura',
-	    data : [ ]
-	  } ]
-	  });
-  
-  
+
   
   function connect () {
   	
@@ -90,9 +50,6 @@
 	      				
 	      				mens=mens.substr(0,stringLength - 3);
 	      				
-	      			    var point = [ (new Date()).getTime(), parseFloat(mens) ];
-//	      			  var shift = randomData.data.length > 60;
-	      			  randomData.addPoint(point, true, false);
 	      		         
 	      				
 	      			}	
@@ -124,53 +81,30 @@
   }
   
   
-  
-//function actualizarGrafDistancia(dist){  
-//  
-//  $(function () {
-//	    $('#ContDist').highcharts({
-//	        chart: {
-//	            plotBackgroundColor: null,
-//	            plotBorderWidth: 0,
-//	            plotShadow: false
-//	        },
-//	        title: {
-//	            text: 'Sensor<br>Distancia<br>SSDD 2015-I',
-//	            align: 'center',
-//	            verticalAlign: 'middle',
-//	            y: 40
-//	        },
-//	        tooltip: {
-//	            pointFormat: '{series.name}: <b>{point.percentage:.1f}cm</b>'
-//	        },
-//	        plotOptions: {
-//	            pie: {
-//	                dataLabels: {
-//	                    enabled: true,
-//	                    distance: -50,
-//	                    style: {
-//	                        fontWeight: 'bold',
-//	                        color: 'white',
-//	                        textShadow: '0px 1px 2px black'
-//	                    }
-//	                },
-//	                startAngle: -90,
-//	                endAngle: 90,
-//	                center: ['50%', '75%']
-//	            }
-//	        },
-//	        series: [{
-//	            type: 'pie',
-//	            name: 'Distancia',
-//	            innerSize: '50%',
-//	            data: [
-//	                ['Sensor HC-SR04',   dist]
-//	            ]
-//	        }]
-//	    });
-//	});
-//}
 
+  var opts = {
+		  lines: 12,
+		  angle: 0.5,
+		  lineWidth: 0.1,
+		  limitMax: 'false', 
+		  percentColors: [[0.0, "#cccccc" ], [0.50, "#ffff00"], [1.0, "#ff0000"]], // !!!!
+		  strokeColor: '#E0E0E0',
+		  generateGradient: true,
+		    pointer: {
+		    length: 0.9, // The radius of the inner circle
+		    strokeWidth: 0.035, // The rotation offset
+		    color: '#000000' // Fill color
+		  },
+		  colorStart: '#cdcdcd',   // Colors
+		  colorStop: '#ff0000',    // just experiment with them
+		  strokeColor: '#000000',   // to see which ones work best for you
+		  generateGradient: true
+		};
+		var target = document.getElementById('foo'); // your canvas element
+		var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+		gauge.maxValue = 360; // set max gauge value
+		gauge.animationSpeed = 32; // set animation speed (32 is default value)
+		gauge.set(270); // set actual value
 
 
 

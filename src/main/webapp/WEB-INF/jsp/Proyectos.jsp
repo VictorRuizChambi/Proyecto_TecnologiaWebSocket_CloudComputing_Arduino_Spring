@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="<c:url value='/resources/cliente.css'/>">
   <script src="<c:url value="/resources/proyecto.js" />"></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<!--   <script src="http://code.highcharts.com/highcharts.js"></script> -->
-<!--   <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
- <script src="<c:url value="/resources/highcharts.js" />"></script>
 </head>
 <body >
 
@@ -80,6 +77,7 @@ window.onload=function(){startTime();connect();}
     <p id="graficoTemperatura" style="font-size:20px;"></p>
     <p id="GraficTemperatura" style="font-size:20px;"></p>
     <p id="graficoDistancia" style="font-size:20px;"></p>
+    <canvas id="foo"></canvas>
 
 	<div id="ContDist" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 
