@@ -1,0 +1,5 @@
+Link del proyecto en Openshift: http://proyectofinalssdd-ssddfisi.rhcloud.com/proyecto.html
+
+Link del dweet:http://dweet.io/follow/SSDFISI
+
+"Thing" en dweet: SSDDFISI
